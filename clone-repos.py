@@ -14,6 +14,8 @@ if __name__ == "__main__":
 				print('Already exists: %s' % local_path)
 			else:
 				print('Cloning repository...')
-				command = 'git clone %s wkdir/%s' % (remote_path, local_path)
+				command = 'git clone %s %s/%s' % (remote_path,
+								  WORKING_DIRECTORY_NAME,
+								  local_path)
 				print(command)
 				os.system(command)
